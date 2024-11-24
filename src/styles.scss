@@ -1,1 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap");
+
+html {
+  color-scheme: light;
+  @include mat.button-overrides(());
+  @include mat.card-overrides(
+    (
+      // subtitle-text-color: orange,
+      //elevated-container-color: red
+    )
+  );
+
+  @include mat.theme(
+    (
+      color: (
+        theme-type: light,
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      typography: (
+        plain-family: "Noto Sans Thai",
+        brand-family: "Noto Sans Thai",
+        bold-weight: 900,
+        medium-weight: 500,
+        regular-weight: 300,
+      ),
+      density: 0,
+    )
+  );
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #f7f7f7;
+}
+body {
+  margin: 0;
+  font-family: "Noto Sans Thai", Roboto, "Helvetica Neue", sans-serif;
+}
+:root {
+  @include mat.toolbar-overrides(
+    (
+      container-background-color: #0b3954,
+      container-text-color: white,
+    )
+  );
+}

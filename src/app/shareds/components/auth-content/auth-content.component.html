@@ -1,0 +1,25 @@
+<mat-sidenav-container fullscreen>
+  <app-auth-navbar></app-auth-navbar>
+
+  <mat-sidenav
+    #sidenav
+    [mode]="mobileQueryMax?.matches ? 'over' : 'side'"
+    [opened]="mobileQueryMax?.matches ? false : true"
+  >
+    <app-auth-sidebar
+      (close)="mobileQueryMax?.matches ? sidenav.close() : null"
+    ></app-auth-sidebar>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-auth-navbar
+      [medie_query]="mobileQueryMax?.matches"
+      (toggle)="sidenav.toggle()"
+    >
+    </app-auth-navbar>
+  </mat-sidenav-content>
+  <div class="content-wrapper">
+    <main>
+      <ng-content #name></ng-content>
+    </main>
+  </div>
+</mat-sidenav-container>

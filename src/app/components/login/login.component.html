@@ -1,0 +1,31 @@
+<mat-card class="example-card" appearance="outlined">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>
+      <h5>ยินดีต้อนรับเข้าสู่ระบบงาน CKD-Clinic</h5>
+    </mat-card-title>
+    <mat-card-subtitle>กรุณาลงชื่อเข้าใช้งาน</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div class="row">
+      <div class="m-2">
+        <form (submit)="onSubmit()">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>ชื่อผู้ใช้งาน</mat-label>
+            <input matInput placeholder="Username" />
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>รหัสผ่าน</mat-label>
+            <input matInput placeholder="Password" />
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+          <button type="submit" mat-flat-button class="w-100">
+            เข้าสู่ระบบ
+          </button>
+        </form>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
