@@ -3,10 +3,17 @@ import { MatDivider } from '@angular/material/divider';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { RouterModule } from '@angular/router';
 import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-auth-sidebar',
-  imports: [MatSidenavModule, MatDivider, MatListModule, RouterModule],
+  imports: [
+    MatSidenavModule,
+    MatDivider,
+    MatListModule,
+    RouterModule,
+    MatButtonModule,
+  ],
   templateUrl: './auth-sidebar.component.html',
   styleUrl: './auth-sidebar.component.scss',
 })
