@@ -5,26 +5,24 @@
 />
 
 <mat-nav-list dense class="mt-2">
-  <a
-    mat-list-item
-    [routerLink]="['/stock']"
-    routerLinkActive="is_active"
-    (click)="onCloseSideBar()"
-  >
-    <span mat-line><span class="mat-h4">Stock</span></span>
-    <img
-      matListAvatar
-      src="https://image.flaticon.com/icons/svg/1198/1198345.svg"
-      alt=""
-    />
-  </a>
+  <button mat-raised-button>
+    <a
+      mat-flat-button
+      mat-list-item
+      [routerLink]="['/stock']"
+      routerLinkActive="is_active"
+      (click)="onCloseSideBar()"
+    >
+      ทะเบียนผู้ป่วย CKD
+    </a>
+  </button>
   <a
     mat-list-item
     [routerLink]="['/shop']"
     routerLinkActive="is_active"
     (click)="onCloseSideBar()"
   >
-    <span mat-line><span class="mat-h4">Shop</span></span>
+    <span mat-line><span class="mat-h4">ขึ้นทะเบียนผู้ป่วยรายใหม่</span></span>
     <img
       matListAvatar
       src="https://image.flaticon.com/icons/svg/599/599299.svg"
